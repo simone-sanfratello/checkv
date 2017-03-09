@@ -1,0 +1,36 @@
+{
+  "name": "checkv",
+  "version": "0.0.1-alpha",
+  "description": "validator checker",
+  "main": "main.js",
+  "dependencies": {
+    "a-toolbox": "^x",
+    "log-segment": "^x"
+  },
+  "devDependencies": {
+    "tap": "^x",
+    "faker": "^x"
+  },
+  "engines": {
+    "node": ">=4.x",
+    "npm": ">=3.x"
+  },
+  "scripts": {
+    "test": "clear && standard && tap test/tdd/*",
+    "test-cov": "clear && standard && tap test/tdd/* --cov"
+  },
+  "files": [
+    "main.js",
+    "lib/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simone-sanfratello/checkv.git"
+  },
+  "keywords": [
+    "check",
+    "validator"
+  ],
+  "author": "Simone Sanfratello <simone.sanfra@gmail.com>",
+  "license": "MIT"
+}
