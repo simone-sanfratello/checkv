@@ -53,6 +53,56 @@ const samples = {
       value: -1,
       rules: { isInteger: true },
       result: true
+    },
+    {
+      value: -1,
+      rules: { isEqual: -1 },
+      result: true
+    },
+    {
+      value: 100,
+      rules: { isEqual: 99 },
+      result: false
+    },
+    {
+      value: 100,
+      rules: { isGreater: 99 },
+      result: true
+    },
+    {
+      value: 1,
+      rules: { isGreater: 2 },
+      result: false
+    },
+    {
+      value: 9,
+      rules: { isLess: 88 },
+      result: true
+    },
+    {
+      value: 77,
+      rules: { isLess: 66 },
+      result: false
+    },
+    {
+      value: 1,
+      rules: { isGreaterOrEqual: 1 },
+      result: true
+    },
+    {
+      value: 1,
+      rules: { isGreaterOrEqual: 2 },
+      result: false
+    },
+    {
+      value: 2,
+      rules: { isLessOrEqual: 2 },
+      result: true
+    },
+    {
+      value: 2,
+      rules: { isLessOrEqual: 3 },
+      result: true
     }
   ],
   object: [
@@ -109,19 +159,21 @@ const samples = {
       rules: { isFunction: true },
       result: false
     }
-    /* todo
-    {
-      value: function () { },
-      rules: { isFunction: true, returnPromise: false },
-      result: true
-    },
-    {
-      value: function () {
-        return new Promise((resolve, reject) => { })
-      },
-      rules: { isFunction: true, returnPromise: true },
-      result: true
-    }*/
+
+/* 
+@todo
+{
+value: function () { },
+rules: { isFunction: true, returnPromise: false },
+result: true
+},
+{
+value: function () {
+return new Promise((resolve, reject) => { })
+},
+rules: { isFunction: true, returnPromise: true },
+result: true
+}*/
   ],
   misc: [
     {
