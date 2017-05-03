@@ -1,5 +1,7 @@
 # checkv
 
+! idiomatic
+
 ---
 
 ## License

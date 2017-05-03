@@ -135,6 +135,36 @@ const samples = {
       value: { p1: null },
       rules: { isObject: true, hasProperties: [ 'p2' ] },
       result: false
+    },
+    {
+      value: 1,
+      rules: { isExactly: 1 },
+      result: true
+    },
+    {
+      value: 'a',
+      rules: { isExactly: 'a' },
+      result: true
+    },
+    {
+      value: 1,
+      rules: { isExactly: '1' },
+      result: false
+    },
+    {
+      value: [0, 1, 2, 3],
+      rules: { isExactly: [0, 1, 2, 3] },
+      result: true
+    },
+    {
+      value: [0, 1, 2, 3],
+      rules: { isExactly: ['0', '1', '2', '3'] },
+      result: false
+    },
+    {
+      value: [0, '1', function () {}],
+      rules: { isExactly: [0, '1', function () {}] },
+      result: false
     }
   ],
   // function
@@ -150,7 +180,7 @@ const samples = {
       result: false
     },
     {
-      value: function () { },
+      value: function () {},
       rules: { isFunction: true },
       result: true
     },
@@ -160,20 +190,20 @@ const samples = {
       result: false
     }
 
-/* 
-@todo
-{
-value: function () { },
-rules: { isFunction: true, returnPromise: false },
-result: true
-},
-{
-value: function () {
-return new Promise((resolve, reject) => { })
-},
-rules: { isFunction: true, returnPromise: true },
-result: true
-}*/
+  /* 
+  @todo
+  {
+  value: function () { },
+  rules: { isFunction: true, returnPromise: false },
+  result: true
+  },
+  {
+  value: function () {
+  return new Promise((resolve, reject) => { })
+  },
+  rules: { isFunction: true, returnPromise: true },
+  result: true
+  }*/
   ],
   misc: [
     {
