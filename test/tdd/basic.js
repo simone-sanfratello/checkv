@@ -165,6 +165,31 @@ const samples = {
       value: [0, '1', function () {}],
       rules: { isExactly: [0, '1', function () {}] },
       result: false
+    },
+    {
+      value: [0, 1],
+      rules: { isArray: true },
+      result: true
+    },
+    {
+      value: [0, 1],
+      rules: { isArray: false },
+      result: false
+    },
+    {
+      value: 0,
+      rules: { isArray: true },
+      result: false
+    },
+    {
+      value: 0,
+      rules: { isEnum: { A: 0, B: 1 } },
+      result: true
+    },
+    {
+      value: 'A',
+      rules: { isEnum: { A: 0, B: 1 } },
+      result: false
     }
   ],
   // function
