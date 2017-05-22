@@ -105,6 +105,43 @@ const samples = {
       result: true
     }
   ],
+  string: [
+    {
+      value: 'ciao',
+      rules: { isString: true },
+      result: true
+    },
+    {
+      value: 'ciao',
+      rules: { isString: false },
+      result: false
+    },
+    {
+      value: 'ciao',
+      rules: { isShorterThan: 10 },
+      result: true
+    },
+    {
+      value: 'ciao',
+      rules: { isShorterThan: 1 },
+      result: false
+    },
+    {
+      value: 'miao',
+      rules: { isLongerThan: 10 },
+      result: false
+    },
+    {
+      value: 'bau',
+      rules: { isLongerThan: 1 },
+      result: true
+    },
+    {
+      value: Date.now(),
+      rules: { isLongerThan: 1 },
+      result: false
+    }
+  ],
   object: [
     {
       value: null,
@@ -239,21 +276,6 @@ const samples = {
       rules: { isFunction: true },
       result: false
     }
-
-  /* 
-  @todo
-  {
-  value: function () { },
-  rules: { isFunction: true, returnPromise: false },
-  result: true
-  },
-  {
-  value: function () {
-  return new Promise((resolve, reject) => { })
-  },
-  rules: { isFunction: true, returnPromise: true },
-  result: true
-  }*/
   ],
   misc: [
     {
