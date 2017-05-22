@@ -5,18 +5,20 @@
   "main": "main.js",
   "dependencies": {
     "a-toolbox": "^x",
-    "log-segment": "^x"
+    "log-segment": "^1.x"
   },
   "devDependencies": {
-    "tap": "^x",
-    "faker": "^x"
+    "faker": "^x",
+    "pre-commit": "^x",
+    "tap": "^10.x",
+    "standard": "^x"
   },
   "engines": {
     "node": ">=4.x",
     "npm": ">=3.x"
   },
   "scripts": {
-    "test": "clear && standard && tap test/tdd/*",
+    "test": "standard && tap test/*",
     "test-cov": "clear && standard && tap test/tdd/* --cov"
   },
   "files": [
