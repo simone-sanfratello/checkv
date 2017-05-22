@@ -108,6 +108,31 @@ const samples = {
   object: [
     {
       value: null,
+      rules: { isSet: true },
+      result: false
+    },
+    {
+      value: undefined,
+      rules: { isSet: true },
+      result: false
+    },
+    {
+      value: 0,
+      rules: { isSet: true },
+      result: true
+    },
+    {
+      value: '',
+      rules: { isSet: true },
+      result: true
+    },
+    {
+      value: {},
+      rules: { isSet: true },
+      result: true
+    },
+    {
+      value: null,
       rules: { isObject: true },
       result: false
     },

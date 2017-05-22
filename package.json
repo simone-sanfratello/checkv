@@ -1,7 +1,7 @@
 {
   "name": "checkv",
-  "version": "0.0.4-dev",
-  "description": "validator checker",
+  "version": "0.0.5-dev",
+  "description": "javascript idiomatic validator",
   "main": "main.js",
   "dependencies": {
     "a-toolbox": "^x",
@@ -31,6 +31,6 @@
     "check",
     "validator"
   ],
-  "author": "Simone Sanfratello <simone.sanfra@gmail.com>",
+  "author": "Simone Sanfratello <simone@braceslab.com>",
   "license": "MIT"
 }
