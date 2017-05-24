@@ -107,6 +107,11 @@ const samples = {
   ],
   string: [
     {
+      value: undefined,
+      rules: { isString: true },
+      result: false
+    },
+    {
       value: 'ciao',
       rules: { isString: true },
       result: true
@@ -118,27 +123,27 @@ const samples = {
     },
     {
       value: 'ciao',
-      rules: { isShorterThan: 10 },
+      rules: { isShorter: 10 },
       result: true
     },
     {
       value: 'ciao',
-      rules: { isShorterThan: 1 },
+      rules: { isShorter: 1 },
       result: false
     },
     {
       value: 'miao',
-      rules: { isLongerThan: 10 },
+      rules: { isLonger: 10 },
       result: false
     },
     {
       value: 'bau',
-      rules: { isLongerThan: 1 },
+      rules: { isLonger: 1 },
       result: true
     },
     {
       value: Date.now(),
-      rules: { isLongerThan: 1 },
+      rules: { isLonger: 1 },
       result: false
     }
   ],
