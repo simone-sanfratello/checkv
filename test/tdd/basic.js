@@ -145,6 +145,21 @@ const samples = {
       value: Date.now(),
       rules: { isLonger: 1 },
       result: false
+    },
+    {
+      value: '#no-email',
+      rules: { isEmail: true },
+      result: false
+    },
+    {
+      value: 'name.surname@email.com',
+      rules: { isEmail: true },
+      result: true
+    },
+    {
+      value: 'name.surname@sub.email.com',
+      rules: { isEmail: true },
+      result: true
     }
   ],
   object: [
