@@ -224,6 +224,21 @@ const samples = {
       result: true
     },
     {
+      value: undefined,
+      rules: { isExactly: undefined },
+      result: true
+    },
+    {
+      value: null,
+      rules: { isExactly: undefined },
+      result: false
+    },
+    {
+      value: null,
+      rules: { isExactly: null },
+      result: true
+    },
+    {
       value: 'a',
       rules: { isExactly: 'a' },
       result: true
