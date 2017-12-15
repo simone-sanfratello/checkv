@@ -55,6 +55,11 @@ const samples = {
       result: true
     },
     {
+      value: -1.01,
+      rules: { isInteger: true },
+      result: false
+    },
+    {
       value: -1,
       rules: { isEqual: -1 },
       result: true
@@ -315,7 +320,7 @@ const samples = {
   misc: [
     {
       value: 0,
-      rules: { isAwesome: true },
+      rules: { isAnUmbrella: true },
       result: false
     }
   ]
