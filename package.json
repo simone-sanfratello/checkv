@@ -1,14 +1,12 @@
 {
   "name": "checkv",
-  "version": "0.0.9-alpha",
+  "version": "0.0.10",
   "description": "javascript idiomatic validator",
   "main": "main.js",
   "dependencies": {
-    "a-toolbox": "^1.x",
     "log-segment": "^1.x"
   },
   "devDependencies": {
-    "faker": "^x",
     "pre-commit": "^x",
     "tap": "^10.x",
     "standard": "^x"
