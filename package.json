@@ -1,6 +1,6 @@
 {
   "name": "checkv",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "javascript idiomatic validator",
   "main": "main.js",
   "dependencies": {
@@ -12,7 +12,7 @@
     "standard": "^x"
   },
   "engines": {
-    "node": ">=4.x"
+    "node": ">=4"
   },
   "scripts": {
     "test": "standard && tap test/*",
