@@ -44,7 +44,7 @@ checkv(input, validators): true | false
 
 #### types
 
-- isSet: ``bool``  
+- _isSet_: ``bool``  
 check if input is set - it's ok if is not ``null`` or ``undefined``
 ````js
 checkv(null, { isSet: true }) // return false
@@ -53,7 +53,7 @@ checkv(0, { isSet: true }) // return true
 checkv('', { isSet: true }) // return true
 ````
 
-- isNumber: ``bool``  
+- _isNumber_: ``bool``  
 check if input is a number
 ````js
 checkv(0, { isNumber: true }) // return true
@@ -62,27 +62,27 @@ checkv('Alice', { isNumber: true }) // return false
 checkv('Alice', { isNumber: false }) // return true
 ````
 
-- isString: ``bool``  
+- _isString_: ``bool``  
 check if input is a string
 ````js
 checkv('Alice', { isString: true }) // return true
 ````
 
-- isObject: ``bool``  
+- _isObject_: ``bool``  
 check if input is an object
 ````js
 checkv({}, { isObject: true }) // return true
 checkv('Alice', { isObject: false }) // return true
 ````
 
-- isArray: ``bool``  
+- _isArray_: ``bool``  
 check if input is an array
 ````js
 checkv([], { isArray: true }) // return true
 checkv('Alice', { isArray: false }) // return true
 ````
 
-- isFunction: ``bool``  
+- _isFunction_: ``bool``  
 check if input is a function
 ````js
 checkv(f(){}, { isFunction: true }) // return true
@@ -90,46 +90,46 @@ checkv(f(){}, { isFunction: true }) // return true
 
 #### number
 
-- isInteger: ``bool``  
+- _isInteger_: ``bool``  
 check if input is an integer
 ````js
 checkv(1, { isInteger: true }) // return true
 checkv(1.1, { isInteger: true }) // return false
 ````
 
-- isPositive: ``bool``  
+- _isPositive_: ``bool``  
 check if input is positive
 ````js
 checkv(1, { isPositive: true }) // return true
 checkv(-1, { isPositive: true }) // return false
 ````
 
-- isEqual: ``number``  
+- _isEqual_: ``number``  
 check if input is equal to ``number``  
 Note: will be extend to other types
 ````js
 checkv(1, { isEqual: 1 }) // return true
 ````
 
-- isGreater: ``number``  
+- _isGreater_: ``number``  
 check if input is greater than ``number``
 ````js
 checkv(1, { isGreater: 0 }) // return true
 ````
 
-- isLess: ``number``  
+- _isLess_: ``number``  
 check if input is less than ``number``
 ````js
 checkv(1, { isLess: 0 }) // return false
 ````
 
-- isGreaterOrEqual: ``number``  
+- _isGreaterOrEqual_: ``number``  
 check if input is greater than ``number``
 ````js
 checkv(1, { isGreaterOrEqual: 1 }) // return true
 ````
 
-- isLessOrEqual: ``number``  
+- _isLessOrEqual_: ``number``  
 check if input is greater than ``number``
 ````js
 checkv(1, { isLessOrEqual: 2 }) // return true
@@ -137,25 +137,25 @@ checkv(1, { isLessOrEqual: 2 }) // return true
 
 #### string
 
-- isEmail: ``bool``  
+- _isEmail_: ``bool``  
 check if input is an email
 ````js
 checkv('simone@braceslab.com', { isEmail: true }) // return true
 ````
 
-- isShorter: ``number``  
+- _isShorter_: ``number``  
 check if input is shorter than ``number``
 ````js
 checkv('simone@braceslab.com', { isShorter: 3 }) // return false
 ````
 
-- isLonger: ``number``  
+- _isLonger_: ``number``  
 check if input is shorter than ``number``
 ````js
 checkv('simone@braceslab.com', { isLonger: 3 }) // return true
 ````
 
-- isIn: ``array|string``  
+- _isIn_: ``array|string``  
 check if input contains value
 ````js
 checkv('Frank', { isIn: ['Frank', 'Paul', 'Alex', 'Maurice'] }) // return true
@@ -163,13 +163,13 @@ checkv('Frank', { isIn: ['Frank', 'Paul', 'Alex', 'Maurice'] }) // return true
 
 #### object
 
-- hasProperties: ``array``  
+- hasProperties_: ``array``  
 check if input, as object, has all properties in ``array``  
 ````js
 checkv({a: 1}, { hasProperties: ['a'] }) // return true
 ````
 
-- isEnum: ``object``  
+- _isEnum_: ``object``  
 check if input is en element of the `object`` as enum
 ````js
 const enum = { A: 0, B: 1 }
@@ -179,7 +179,7 @@ checkv(a, { isEnum: enum }) // return true
 
 #### any
 
-- isExactly: ``*``  
+- _isExactly_: ``*``  
 check if input is exactly ``*`` - like deep strict equal
 ````js
 checkv(1, { isExactly: 1) // return true
