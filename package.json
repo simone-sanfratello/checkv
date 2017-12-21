@@ -1,6 +1,6 @@
 {
   "name": "checkv",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "javascript idiomatic validator",
   "main": "main.js",
   "dependencies": {
