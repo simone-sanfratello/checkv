@@ -2,7 +2,6 @@
 
 const check = require('../../')
 const tap = require('tap')
-// const faker = require('faker')
 const log = require('log-segment')
 
 log.set({
@@ -320,7 +319,7 @@ const samples = {
   misc: [
     {
       value: 0,
-      rules: { isAnUmbrella: true },
+      rules: { isAnUnknownCheck: true },
       result: false
     }
   ]

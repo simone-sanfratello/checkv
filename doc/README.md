@@ -13,7 +13,7 @@
 
 ## Install
 
-Note: this module is on development
+Note: this library is under development
 
 ````bash
 $ npm i checkv --save
@@ -83,7 +83,7 @@ checkv('Alice', { isArray: false }) // return true
 ````
 
 - isFunction: ``bool``  
-check if input is an object
+check if input is a function
 ````js
 checkv(f(){}, { isFunction: true }) // return true
 ````
