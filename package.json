@@ -1,11 +1,8 @@
 {
   "name": "checkv",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "javascript idiomatic validator",
   "main": "main.js",
-  "dependencies": {
-    "log-segment": "^1.x"
-  },
   "devDependencies": {
     "pre-commit": "^x",
     "babel": "^6.x",
@@ -32,11 +29,12 @@
   },
   "files": [
     "main.js",
-    "lib/*"
+    "lib/*",
+    "dist/*"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/simone-sanfratello/checkv.git"
+    "url": "git+https://github.com/braceslab/checkv.git"
   },
   "keywords": [
     "check",

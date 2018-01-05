@@ -44,7 +44,6 @@ See [documentation](./doc/README.md) for further informations.
 
 ## TODO
 
-- [ ] browser version
 - [ ] Date
   - _isBefore_ : Date
   - _isAfter_ : Date
@@ -56,7 +55,7 @@ See [documentation](./doc/README.md) for further informations.
 
 The MIT License (MIT)
 
-Copyright (c) 2017, [braces lab](https://braceslab.com)
+Copyright (c) 2017-2018, [braces lab](https://braceslab.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
