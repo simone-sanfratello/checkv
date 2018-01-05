@@ -45,6 +45,10 @@ See [documentation](./doc/README.md) for further informations.
 ## TODO
 
 - [ ] browser version
+- [ ] Date
+  - _isBefore_ : Date
+  - _isAfter_ : Date
+  - _isSameDay_ : Date compare trunc at date
 
 ---
 
