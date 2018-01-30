@@ -164,6 +164,71 @@ const samples = {
       value: 'name.surname@sub.email.com',
       rules: { isEmail: true },
       result: true
+    },
+    {
+      value: '12345123456',
+      rules: { isPinCode: true },
+      result: true
+    },
+    {
+      value: '1',
+      rules: { isPinCode: true },
+      result: true
+    },
+    {
+      value: '1+39',
+      rules: { isPinCode: true },
+      result: false
+    },
+    {
+      value: '1 2 3',
+      rules: { isPinCode: true },
+      result: false
+    },
+    {
+      value: '345123456',
+      rules: { isPhone: true },
+      result: true
+    },
+    {
+      value: '+39 345.123 456',
+      rules: { isPhone: true },
+      result: true
+    },
+    {
+      value: '34',
+      rules: { isPhone: true },
+      result: false
+    },
+    {
+      value: '+3.4',
+      rules: { isPhone: true },
+      result: false
+    },
+    {
+      value: '187',
+      rules: { isPhone: true },
+      result: true
+    },
+    {
+      value: 'fa000e46',
+      rules: { isHex: true },
+      result: true
+    },
+    {
+      value: 'FFAA123',
+      rules: { isHex: true },
+      result: true
+    },
+    {
+      value: '#ff 39 aa',
+      rules: { isHex: true },
+      result: false
+    },
+    {
+      value: 'abcdefgh',
+      rules: { isHex: true },
+      result: false
     }
   ],
   object: [

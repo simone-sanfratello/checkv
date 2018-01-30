@@ -137,12 +137,6 @@ checkv(1, { isLessOrEqual: 2 }) // return true
 
 #### string
 
-- _isEmail_ : ``bool``  
-check if input is an email
-````js
-checkv('simone@braceslab.com', { isEmail: true }) // return true
-````
-
 - _isShorter_ : ``number``  
 check if input is shorter than ``number``
 ````js
@@ -150,9 +144,46 @@ checkv('simone@braceslab.com', { isShorter: 3 }) // return false
 ````
 
 - _isLonger_ : ``number``  
-check if input is shorter than ``number``
+check if input is longer than ``number``
 ````js
 checkv('simone@braceslab.com', { isLonger: 3 }) // return true
+````
+
+- _isEmail_ : ``bool``  
+check if input is an email
+````js
+checkv('simone@braceslab.com', { isEmail: true }) // return true
+````
+
+- _isPinCode_ : ``bool``  
+check if input is a pin code, means that contains only numbers
+````js
+checkv('12345123456', { isPinCode: true }) // return true
+checkv('1', { isPinCode: true }) // return true
+checkv('1+39', { isPinCode: true }) // return false
+checkv('1 2 3', { isPinCode: true }) // return false
+````
+
+- _isPhone_ : ``bool``  
+check if input is a phone number, means that:
+  - contains only numbers or spaces or dots
+  - may starts with +
+  - is longer at least 3 numbers
+````js
+checkv('345123456', { isPhone: true }) // return true
+checkv('+39 345.123 456', { isPhone: true }) // return true
+checkv('34', { isPhone: true }) // return false
+checkv('+3.4', { isPhone: true }) // return false
+checkv('187', { isPhone: true }) // return true
+````
+
+- _isHex_ : ``bool``  
+check if input is an hex, means that contains only alphanumeric chars (a-9,a-f)
+````js
+checkv('fa000e46', { isHex: true }) // return true
+checkv('FFAA123', { isHex: true }) // return true
+checkv('#ff 39 aa', { isHex: true }) // return false
+checkv('abcdefgh', { isHex: true }) // return false
 ````
 
 - _isIn_ : ``array|string``  

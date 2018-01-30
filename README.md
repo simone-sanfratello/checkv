@@ -34,6 +34,8 @@ checkv(0, { isNumber: true }) // return true
 checkv('Alice', { isNumber: false }) // return true
 checkv(2, { isGreater: 1, isLessOrEqual: 3 }) // return true
 checkv('simone@braceslab.com', { isEmail: true }) // return true
+checkv('+39 345 123 34 56', { isPhone: true }) // return true
+checkv('ff39aa345bc12b3e34d56d', { isHex: true }) // return true
 checkv('Frank', { isIn: ['Frank', 'Paul', 'Alex', 'Maurice'] }) // return true
 
 ````
