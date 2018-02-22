@@ -324,6 +324,11 @@ const samples = {
     },
     {
       value: [0, 1, 2, 3],
+      rules: { isExactly: [0, 1] },
+      result: false
+    },
+    {
+      value: [0, 1, 2, 3],
       rules: { isExactly: ['0', '1', '2', '3'] },
       result: false
     },

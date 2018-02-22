@@ -51,6 +51,9 @@ See [documentation](./doc/README.md) for further informations.
   - _isAfter_ : Date
   - _isSameDay_ : Date compare trunc at date
 
+- [ ] travis CI
+- [ ] readme coverage badge / coverage 100%
+
 ---
 
 ## License

@@ -1,10 +1,11 @@
 {
   "name": "checkv",
-  "version": "0.0.17",
-  "description": "javascript idiomatic validator",
+  "version": "0.0.18",
   "main": "main.js",
+  "dependencies": {
+    "deep-equal": "^1.0.1"
+  },
   "devDependencies": {
-    "pre-commit": "^x",
     "babel": "^6.x",
     "babel-core": "^6.x",
     "babel-preset-env": "^1.6.x",
@@ -16,6 +17,8 @@
     "gulp-buffer": "0.0.x",
     "gulp-clean": "^0.3.x",
     "gulp-sourcemaps": "^2.6.x",
+    "log-segment": "^1.7.1",
+    "pre-commit": "^1.2.2",
     "standard": "^10.x",
     "tap": "^10.x",
     "vinyl-source-stream": "^1.x"
@@ -24,22 +27,28 @@
     "node": ">=4"
   },
   "scripts": {
+    "build": "gulp",
     "test": "standard && tap test/*",
     "test-cov": "clear && standard && tap test/tdd/* --cov"
   },
+  "pre-commit": [
+    "test",
+    "build"
+  ],
   "files": [
     "main.js",
     "lib/*",
     "dist/*"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/braceslab/checkv.git"
-  },
+  "description": "javascript idiomatic validator",
   "keywords": [
     "check",
     "validator"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/braceslab/checkv.git"
+  },
   "author": "Simone Sanfratello <simone@braceslab.com>",
   "license": "MIT"
 }
