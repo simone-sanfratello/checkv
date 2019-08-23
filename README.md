@@ -1,9 +1,10 @@
+# *** DEPRECATED ***
+
+This module is deprecated, do not use
+
+---
+
 # checkv
-
-[![NPM Version](http://img.shields.io/npm/v/checkv.svg?style=flat)](https://www.npmjs.org/package/checkv)
-[![NPM Downloads](https://img.shields.io/npm/dm/checkv.svg?style=flat)](https://www.npmjs.org/package/checkv)
-
-[![JS Standard Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 javascript idiomatic validator
 
@@ -13,10 +14,8 @@ A readable way to validate data
 
 ## Install
 
-Note: this module is on development
-
 ````bash
-$ npm i checkv --save
+$ npm i checkv
 ````
 
 ### Quick start
@@ -43,16 +42,6 @@ checkv('Frank', { isIn: ['Frank', 'Paul', 'Alex', 'Maurice'] }) // return true
 ## Documentation
 
 See [documentation](./doc/README.md) for further informations.
-
-## TODO
-
-- [ ] Date
-  - _isBefore_ : Date
-  - _isAfter_ : Date
-  - _isSameDay_ : Date compare trunc at date
-
-- [ ] travis CI
-- [ ] readme coverage badge / coverage 100%
 
 ---
 
